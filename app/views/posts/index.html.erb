@@ -1,0 +1,71 @@
+<!--navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><span class="high">Good freinds</span></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li>
+                            <%= link_to "Home", root_path %>
+                </li>
+                <li>
+                            <%= link_to "About", about_path %>
+                </li>
+                <li class="active">
+                            <%= link_to "Mission", posts_path %>
+                </li>
+                <li>
+                            <%= link_to "Contact", contact_path %>
+                </li>
+              </ul>
+            </div>
+        </div><!--continer-->
+    </nav>
+
+ <!-- Main -->
+
+    <div class="jumbotron maincontact">
+        <div class="container maintitle">
+          <h1><span class="headline">Mission</h1>
+          <%= link_to "새로운 미션 내리기", new_post_path, class: 'btn btn-success'%>
+
+        </div>
+    </div>
+<!--content-->
+    <section class="section1">
+      
+       <table class="table">
+        <thead>
+          <tr>
+            <th>제목</th>
+            <th>이름</th>
+            <th>마감시각</th>
+            <th>미션비용</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          
+          <% @posts.each do |post| %>
+          <tr>
+            <td><%= link_to post.title, post %></td>
+            <td><%= post.name %></td>
+            <td><%= post.time %></td>
+            <td><%= post.price %></td>
+            
+          </tr>
+          <%end%>
+
+
+        </tbody>
+        
+      </table>
+      
+</section>

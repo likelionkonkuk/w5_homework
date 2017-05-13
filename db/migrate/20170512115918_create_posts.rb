@@ -1,0 +1,17 @@
+class CreatePosts < ActiveRecord::Migration
+  def change
+    create_table :posts do |t|
+      t.string :title
+      t.string :name
+      t.string :phone
+      t.string :major
+      t.string :studentid
+      t.string :time
+      t.string :place
+      t.string :price
+      t.text :content
+
+      t.timestamps null: false
+    end
+  end
+end

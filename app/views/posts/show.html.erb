@@ -1,0 +1,59 @@
+<!--navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><span class="high">Good freinds</span></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li>
+                            <%= link_to "Home", root_path %>
+                </li>
+                <li>
+                            <%= link_to "About", about_path %>
+                </li>
+                <li class="active">
+                            <%= link_to "Mission", posts_path %>
+                </li>
+                <li>
+                            <%= link_to "Contact", contact_path %>
+                </li>
+              </ul>
+            </div>
+        </div><!--continer-->
+    </nav>
+
+ <!-- Main -->
+
+  <div class="jumbotron maincontact">
+      <div class="container maintitle">
+        <h1><span class="headline"><p>Mission: </p><%=@post.title%></h1>
+      </div>
+  </div>
+    
+
+
+<!--show.html.erb-->
+<section class="show">
+
+<p>이름 : <%= @post.name %> </p>
+<p> 전화번호 : <%= @post.phone %></p>
+<p> 전공 : <%= @post.major %></p>
+<p> 학번 : <%= @post.studentid %></p>
+<p> 수행시각 : <%= @post.time %></p>
+<p> 수행비용 : <%= @post.price %></p>
+<p> 수행장소 : <%= @post.place %></p>
+<p> 수행내용 : <%= @post.content %></p>
+<%= image_tag @post.image.url(:medium) %>
+
+
+<%= link_to "목록" ,posts_path %>
+<%= link_to "수정하기" , edit_post_path %>
+<%= link_to "삭제하기" , post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
+</section>

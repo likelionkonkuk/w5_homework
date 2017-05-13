@@ -1,0 +1,99 @@
+<!--navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><span class="high">Good freinds</span></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li>
+                            <%= link_to "Home", root_path %>
+                </li>
+                <li>
+                            <%= link_to "About", about_path %>
+                </li>
+                <li>
+                            <%= link_to "Mission", posts_path %>
+                </li>
+                <li class="active">
+                            <%= link_to "Contact", contact_path %>
+                </li>
+              </ul>
+            </div>
+        </div><!--continer-->
+    </nav>
+
+ <!-- Main -->
+
+  <div class="jumbotron maincontact">
+      <div class="container maintitle">
+        <h1><span class="headline">Contact</h1>
+        <!--<p class="maintext"><span class="green">건국대 좋은친구들</span>에 궁금한 점이 있으시면 언제든지 연락해주세요. <br>성실하게 답해드리겠습니다. </p>-->
+      </div>
+  </div>
+ 
+ <!-- Top content -->
+ <div class = "contactsection1">
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                	
+                    <div class="row">
+                        <div class="col-sm-5">
+                        	<div class="form-box">
+                        		<div class="form-top">
+	                        		<div class="form-top-left">
+	                            		<p>문의사항이 있으시면 연락해주세요</p>
+	                        		</div>
+	                        		<div class="form-top-right">
+	                        			<i class="fa fa-pencil"></i>
+	                        		</div>
+	                            </div>
+	                            <div class="form-bottom">
+				                    <form role="form" action="" method="post" class="registration-form">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-first-name">이름..</label>
+				                        	<input type="text" name="form-first-name" placeholder="이름" class="form-first-name form-control" id="form-first-name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-last-name">전화번호</label>
+				                        	<input type="text" name="form-last-name" placeholder="연락처" class="form-last-name form-control" id="form-last-name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-email">Email</label>
+				                        	<input type="text" name="form-email" placeholder="Email" class="form-email form-control" id="form-email">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-about-yourself">궁금한점</label>
+				                        	<textarea name="form-about-yourself" placeholder="궁금한점" 
+				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+				                        </div>
+				                        <button type="submit" class="btn">Submit</button>
+				                    </form>
+			                    </div>
+                        	</div><!--formbox-->
+                        	
+                        </div><!--col-sm-5-->
+                        
+                        <div class="col-sm-1 middle-border"></div>
+                        	
+                        <div class="col-sm-6">
+                            <div class="row"><h2>주소</h2></div>
+                            <div class="row"><p>서울특별시 광진구 능동로 사자연구관</p></div>
+                        	<div id="map" style="width:100%;height:350px;"></div>
+                        
+                        </div>
+                    
+                </div><!--container-->
+            </div><!--inner bit-->
+            
+        </div><!--top conent-->
+    </div>
+      
