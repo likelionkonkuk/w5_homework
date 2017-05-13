@@ -1,0 +1,85 @@
+
+    <section class="jumbotron text-center top">
+      <div class="container">
+        <h1 class="jumbotron-heading">편안한 자연풍경</h1>
+        <p class="lead text-muted"> 하루에 한장, 풍경 사진을 찍어서 기록해봅시다. 당신의 하루가 더 밝아질 거에요.</p>
+        <p>
+          <%= link_to "사진을 올리자!", new_post_path,{ :class=>"btn btn-primary" } %> 
+          <!--<a href="#" class="btn btn-secondary">Secondary action</a>-->
+        </p>
+      </div>
+    </section>
+    
+  <!--index.html.erb-->
+<!--<h2>Lists</h2>-->
+<!--<% @posts.each do |post| %>-->
+<!--	<h2><%= link_to post.title, post %></h2>-->
+<!--<% end %>-->
+
+    <div class="container">
+      <div class="row">
+         <%@posts.each do |post| %>
+          <%= link_to post do %>
+            <%= image_tag post.image.url, {:class=>"landscape"} %>
+          <%end%>
+        <%end%>
+      </div>
+    </div>
+  
+  
+  
+    <div class="album text-muted">
+      <div class="container">
+        <div class="row">
+          <div class="card">
+            <img src="assets/_alone.jpeg" alt="Card image cap">
+            <p class="card-text"> 저 집이 내 집인지. 너의 집인지 나는 모른다.</p>
+          </div>
+          <div class="card">
+            <img src="assets/_cat.jpeg" alt="Card image cap">
+            <p class="card-text"> 저 고양이가 나의 고양이인지. 너의 고양이인지 나는 모른다.</p>
+          </div>
+          <div class="card">
+            <img src="assets/_cloud2.jpeg" alt="Card image cap">
+            <p class="card-text">수많은 구름 속, 또 하나의 구름이 보인다.</p>
+          </div>
+
+          <div class="card">
+            <img src="assets/_cloud4.jpeg" alt="Card image cap">
+            <p class="card-text">정신이 나간건지 점심을 먹으러 나간건지.</p>
+          </div>
+          <div class="card">
+            <img src="assets/_rocket.jpeg" alt="Card image cap">
+            <p class="card-text">닿을 수 있을 것 같지만, 사실 밤을 새도 닿지 못한 건, 내 과제와 나만의 거리만은 아닐 것이다.</p>
+          </div>
+          <div class="card">
+            <img src="assets/_cloud3.jpeg" alt="Card image cap">
+            <p class="card-text"> 끝없는 길 위에서 목적지에 도달하려면, 지나가는 사람들을 잘 봐야한다.</p>
+          </div>
+
+          <div class="card">
+            <img src="assets/_shiny.jpeg" alt="Card image cap">
+            <p class="card-text">아 그냥 디비 자고싶다..</p>
+          </div>
+          <div class="card">
+            <img src="assets/_snow.jpeg" alt="Card image cap">
+            <p class="card-text">눈은 하늘의 쓰레기다. 군인들에게도, 배달원에게도 .</p>
+          </div>
+          <div class="card">
+            <img src="assets/_sky.jpeg" alt="Card image cap">
+            <p class="card-text">하늘 좀 보고 살자.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
