@@ -1,24 +1,32 @@
+## 자세히 보아야 예쁘다.
+- 회원가입을 한 사람들만 모델들을 볼 수 있다
+- 모델의 사진 제공
+- 모델의 기본적인 정보 제공
+- 회원들의 사진 추가로 지속적인 업데이트
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+## 배운 것 활용
+- CRUD
+- devise
+- Paperclip
 
+## 추가할 것
+- 회원 평가기능
+- 회원별 찜하기 기능
+- 일정 회원 등급 이상 hidden 게시판
+- 검색기능
 
-Welcome to your Rails project on Cloud9 IDE!
+## 설계내용
+- Controller
+    - maxim
+- Model
+    - maxim
+    - image
+- GEM
+    - devise
+    - paperclip
 
-To get started, just do the following:
-
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://w5homework-j1h00n.c9users.io/).
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+## 개발후기
+역시 혼자하는 것은 꽤 어려움. 하지만 한가지 단언 할 수 있는 것은 CRUD는 이제 쉽게 만들 수 있다는 것과
+디버깅에 겁먹지 않고 천천히 분석해 구글링 한다는 점.
+중간중간 디버깅하면서 생긴 문제점들에 대해서 구글링해서 찿아보니 쉽게 해결.
+*생각보다 c9이 불안정한지 잘 안되다가 껐다가 킨 이후에는 잘되는 모습을 보일때가 있음.
