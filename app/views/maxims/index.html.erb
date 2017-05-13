@@ -1,0 +1,16 @@
+<p>
+    <% if user_signed_in? %>
+        <%= link_to '로그아웃', destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
+    <% else %>
+        <%= link_to '로그인', new_user_session_path %>
+        <%= link_to '회원가입', new_user_registration_path%>
+    <% end %>
+</p>
+
+<section class = "mainText">
+    <% @maxims.each do |maxim| %>
+        <h2><%= link_to maxim.title, maxim %></h2>
+    <% end %>
+</section>
+
+<%= link_to '추가하기', new_maxim_path %>

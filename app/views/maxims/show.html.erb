@@ -1,0 +1,14 @@
+<section class = "mainText">
+    <h3><span><%= @maxim.title %></span></h3>
+</section>
+<section class = "mainText">
+    <p><%= image_tag @maxim.image.url(:large) %></p>
+    <h4><%= @maxim.content %></h4>
+</section>
+
+
+
+
+<%= link_to '목록으로 돌아가기', maxims_path %>
+<%= link_to '수정하기', edit_maxim_path %>
+<%= link_to '삭제하기', maxim_path(@maxim), method: :delete, data: {confirm: "삭제됩니다."} %>

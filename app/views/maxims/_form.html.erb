@@ -1,0 +1,19 @@
+<%= form_for @maxim do |f| %>
+<section class = "mainText">
+    <div class = "field">
+        <h3><%= f.label :"모델의 이름을 알려주세요."%></h3>
+        <p><%= f.text_field :title, size: "105x2" %></p>
+    </div>
+</section>
+<section class="mainText">
+    <div class="field">
+        <h5><%= f.label :"첨부 이미지"%></h5>
+        <p><%= f.file_field :image %></p>
+    </div>
+    <div class = "field">
+        <h3><%= f.label :"내용" %></h3>
+        <p><%= f.text_area :content, size: "107x14" %></p>
+        <p class="actions"><%= f.button :"완료" %></p>
+    </div>
+</section>
+<% end %>
