@@ -1,0 +1,17 @@
+<div class="post-show">
+    <p>
+        <h4><%= @post.title %></h4>
+    </p>
+    <p>
+        <h6><%= @post.content %></h6>
+    </p>
+    
+    <% if @post.image.present? %>
+            <%= image_tag @post.image.url %>
+    <% end %>
+</div>
+
+
+<%= link_to 'Edit', edit_post_path %>
+<%= link_to 'Home', posts_path %>
+<%= link_to 'Delete', post_path(@post), method: :delete, data:{confirm: "Are you sure?"} %>

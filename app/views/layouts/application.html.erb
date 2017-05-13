@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-light bg-faded">
+    <nav class="nav nav-masthead">
+      <li class="nav-link acitve"><%=link_to "Home", root_path %></li>
+      <li class="nav-link active"><%= link_to "모두보기", informs_path %></li>
+      <% Category.all.each do |category| %>
+        <li class="nav-link active"><%= link_to category.name, informs_path(category: category.name) %></li>
+      <% end %>
+      <li class="nav-link active"><%= link_to "new inform", new_inform_path %></li>
+    </nav>
+  </nav>
+  <%= yield %>
+
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<h1>후기</h1>
+<h2>직접가서 먹어봐...</h2>
+
+<div>
+    <% @posts.each do |post| %>
+        <%= link_to post.title, post %><br>
+    <% end %>
+</div>
+
+<%= link_to "new post", new_post_path%>
