@@ -1,0 +1,23 @@
+<div class="title">
+    <img src="http://bit.ly/2pJSjQm"/>
+    <h3>Your Menu List 1</h3>
+</div>
+
+<div class="menu">
+    <h4><%= @post.menu1 %></h4>
+    <h4><%= @post.menu2 %></h4>
+    <h4><%= @post.menu3 %></h4>
+    <h4><%= @post.menu4 %></h4>
+    <h4><%= @post.menu5 %></h4>
+    <h4><%= @post.menu6 %></h4>
+    <h4><%= @post.menu7 %></h4>
+    <h4><%= @post.menu8 %></h4>
+    <h4><%= @post.menu9 %></h4>
+    <h4><%= @post.menu10 %></h4>
+</div>
+
+<%= link_to "NEXT!", second_path %>
+
+<%= link_to "Home", root_path %>
+<%= link_to "Edit", edit_post_path %>
+<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>

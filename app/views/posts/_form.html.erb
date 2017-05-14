@@ -1,0 +1,23 @@
+<%= form_for @post do |f| %>
+
+    <div class="title">
+        <h4>Make your Menu List about What you want</h4>
+    </div>
+    
+    <ol class="field">
+        <li><%= f.text_field :menu1 %></li>
+        <li><%= f.text_field :menu2 %></li>
+        <li><%= f.text_field :menu3 %></li>
+        <li><%= f.text_field :menu4 %></li>
+        <li><%= f.text_field :menu5 %></li>
+        <li><%= f.text_field :menu6 %></li>
+        <li><%= f.text_field :menu7 %></li>
+        <li><%= f.text_field :menu8 %></li>
+        <li><%= f.text_field :menu9 %></li>
+        <li><%= f.text_field :menu10 %></li>
+    </ol>
+    
+    <div class="actions">
+        <%= f.button :submit %>
+    </div>
+<% end %>

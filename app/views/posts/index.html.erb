@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
+<% else %>
+    <%= link_to 'Sign in', new_user_session_path %>
+    <%= link_to 'Sign up', new_user_registration_path%>
+<% end %>
+
+<div class="title">
+    <img src="http://bit.ly/2pJSjQm"/>
+    <h2><%= link_to "Let's find a today's menu", new_post_path %></h2>
+</div>
