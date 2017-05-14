@@ -1,3 +1,20 @@
-<% @informs.each do |inform| %>
-    <%= link_to inform.title, inform %><br>
-<% end %>
+
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Content</th></th> 
+      </tr>
+    </thead>
+      <% @informs.each do |inform| %> 
+        <tbody>
+          <tr>
+            <td><%= link_to inform.title, inform %></td>
+            <td><%= inform.content %></td>
+          </tr>    
+        </tbody>
+      <% end %>
+  </table>
+</div>  

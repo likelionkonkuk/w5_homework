@@ -1,5 +1,7 @@
 # 핫테고리
 
+c9 주소 : https://w5-homework-hyunkyung12.c9users.io/
+
 ## 1. 기능
 
 - 내가 원하는 매운맛을 선택해서 음식을 알수 있도록
@@ -18,7 +20,7 @@ https://luciuschoi.gitbooks.io/foundblog/content/search_engine/index.html
 - 처음 데이터는 어떤식으로 가져올지
 
 ## 3. 설계내용
-####1 . Model
+
 - Post
 
 | id | title | content | user_id | created_at | updated_at |
@@ -34,6 +36,12 @@ belongs_to user
 | integer | string |
 
 has_many post
+
+- Comment
+
+| content | user_id | post_id |
+|-------|-------|-------|
+| text | integer | integer |
 
 ## 4. 외부파일
 - bootstrap4
@@ -59,10 +67,12 @@ has_many post
 - 카테고리별로 매운맛 고르기
 - 후기 작성하기
 - 지도 보여주기
+- 댓글
 
 추가해야할 기능은
-- 댓글
 - 후기와 정보 이어주기
 - 정보의 title으로 바로 지도검색 하기
 
 임니다..
+
+** 새로고침을 한번 해야 지도가 나옵니다. 경로는 inform의 id를 받는것으로 동일한데 왜 그러는지 잘 모르겠습니다. **

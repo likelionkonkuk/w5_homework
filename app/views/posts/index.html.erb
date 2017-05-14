@@ -1,10 +1,24 @@
 <h1>후기</h1>
 <h2>직접가서 먹어봐...</h2>
 
-<div>
-    <% @posts.each do |post| %>
-        <%= link_to post.title, post %><br>
-    <% end %>
-</div>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Content</th></th> 
+      </tr>
+    </thead>
+      <% @posts.each do |post| %>
+        <tbody>
+          <tr>
+            <td><%= link_to post.title, post %></td>
+            <td><%= post.content %></td>
+          </tr>    
+        </tbody>
+      <% end %>
+  </table>
+</div>  
 
-<%= link_to "new post", new_post_path%>
+
+<button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to "나도 후기남길래!", new_post_path%></button>

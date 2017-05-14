@@ -1,4 +1,4 @@
-<script type="text/javascript" src="4fc287b0f2de9d0c332535f95baccb4c"></script>
+    <script type="text/javascript" src="4fc287b0f2de9d0c332535f95baccb4c"></script>
 
 <p>
     <h4><%= @inform.title %></h4>
@@ -7,7 +7,7 @@
     <h6><%= @inform.content %></h6>
 </p>
 
-<% if @inform.id == 4 %>
+<% if @inform.id == 1 %>
     <div class="post-show-maps">
         <div id="map" style="width:300px;height:300px;"></div>
             <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4fc287b0f2de9d0c332535f95baccb4c"></script>
@@ -24,7 +24,7 @@
     <a href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=건대 신전떡볶이">검색결과</a>
 <% end %>
 
-<% if @inform.id == 5 %>
+<% if @inform.id == 2 %>
     <div class="post-show-maps">
         <div id="map" style="width:300px;height:300px;"></div>
             <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4fc287b0f2de9d0c332535f95baccb4c"></script>
@@ -41,7 +41,7 @@
     <a href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=건대 불난떡볶이">검색결과</a>
 <% end %>
 
-<% if @inform.id == 6 %>
+<% if @inform.id == 3 %>
     <div class="post-show-maps">
         <div id="map" style="width:300px;height:300px;"></div>
             <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=4fc287b0f2de9d0c332535f95baccb4c"></script>
@@ -57,6 +57,7 @@
     </div>
     <a href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=건대 짚신">검색결과</a>
 <% end %>
+
 
 <%= link_to '후기보기', posts_path %><br>
 <%= link_to 'Edit', edit_inform_path %>

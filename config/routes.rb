@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   
   devise_for :users
-  resources :posts, :informs
+  resources :posts do 
+    post "/like", to: "likes#like" 
+    resources :comments, only: [:create, :destroy] 
+  end
+
+  resources :informs
   get '/informs', to: 'informs#home'
   
   root "informs#main"

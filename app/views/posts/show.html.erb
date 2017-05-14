@@ -11,7 +11,37 @@
     <% end %>
 </div>
 
+<%= form_tag post_comments_path(@post) do %> 
+    <div class="input-field"> 
+        <%= text_area_tag :content, nil, class: "materialize-textarea", placeholder: "댓글을 작성해주세요.", required: true %> </div> 
+    <div class="input-field"> 
+        <%= button_tag "댓글 쓰기", class: "btn" %> </div> 
+<% end %>
 
-<%= link_to 'Edit', edit_post_path %>
-<%= link_to 'Home', posts_path %>
-<%= link_to 'Delete', post_path(@post), method: :delete, data:{confirm: "Are you sure?"} %>
+<% if @post.comments.present? %> 
+    <ul class="collection"> 
+    <% @post.comments.each do |comment| %> 
+        <li class="collection-item"> 
+            <span class="title">
+                <%= comment.user.email %>
+            </span> 
+            <span class="right">
+                <%= comment.created_at %>
+            </span> 
+            <p>
+                <%= comment.content %>
+            </p> 
+                <% if comment.user.id == current_user.id %> 
+                    <div>
+                        <%= link_to "삭제", post_comment_path(@post, comment), method: "delete" %>
+                    </div> 
+                <% end %> 
+        </li> 
+    <% end %> 
+    </ul> 
+<% end %>
+
+
+<button type="button" class="btn btn-secondary"><%= link_to 'Edit', edit_post_path %></button>
+<button type="button" class="btn btn-secondary"><%= link_to 'Home', posts_path %></button>
+<button type="button" class="btn btn-secondary"><%= link_to 'Delete', post_path(@post), method: :delete, data:{confirm: "Are you sure?"} %></button>
